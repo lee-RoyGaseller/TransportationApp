@@ -31,6 +31,7 @@ public class HovLane {
     public void prepend(Car car) {
        HovLane hHead = this.head.carConvert(this.head);
         hHead.next = head;
+        
         head = car;
 
 
