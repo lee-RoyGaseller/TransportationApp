@@ -28,13 +28,10 @@ public class HovLane {
         this.next = next;
     }
 
-    public void prepend(Car car) {
-       HovLane hHead = this.head.carConvert(this.head);
-        hHead.next = head;
-        
-        head = car;
-
-
+    public HovLane prepend(Car car) {
+       HovLane head = new HovLane(car);
+        head.next = this;
+        return head;
     }
 
     public HovLane carConvert(Car theCar){
@@ -47,7 +44,7 @@ public class HovLane {
     public int size() {
         int count = 1;
         HovLane temp = this;
-        while (next != null) {
+        while (temp.next != null) {
 
             count++;
             temp = temp.next;

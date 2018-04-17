@@ -5,12 +5,23 @@ import java.util.Objects;
 public class Car  {
     private int ID;
     private String color;
+    private int num;
 
-    public Car(int ID, String color) {
+
+    public Car(int ID, String color, int num) {
         this.ID = ID;
         this.color = color;
+        this.num = num;
+
     }
 
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
 
     public HovLane carConvert(Car theCar){
 
@@ -52,6 +63,6 @@ public class Car  {
 
     @Override
     public String toString() {
-        return "Car{" + "ID=" + ID + ", color='" + color + '\'' + '}';
+        return "Car{" + "ID=" + ID + ", color='" + color + '\'' + ", num=" + num + '}';
     }
 }
