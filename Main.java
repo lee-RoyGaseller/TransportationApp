@@ -51,8 +51,12 @@ public class Main {
 
         ArrayList<Integer> idsOfCarsWithOneOccupant = new ArrayList<>();
 
-        idsOfCarsWithOneOccupant = lane.idsOfCarsHaveThisManyPassengers(lane,1);
+        idsOfCarsWithOneOccupant = lane.idsOfCarsHaveThisManyPassengers(1);
         System.out.println("cars with one passenger: "+ idsOfCarsWithOneOccupant);
+
+        int carsOfThisColor = lane.howManyCarsAreOfThisColor("green");
+
+        System.out.println("how many cars green: "+ carsOfThisColor);
     }
 
     private static HovLane fillHovLane(HovLane lane, int maxSpace, ArrayList<String> colors) {

@@ -48,7 +48,23 @@ public class HovLane {
 
     }
 
-    public ArrayList<Integer> idsOfCarsHaveThisManyPassengers(HovLane theLane, int amountOfPassengers){
+    public int howManyCarsAreOfThisColor(String color){
+        int count = 0;
+        HovLane temp = this;
+        while (temp.next != null) {
+            if(temp.getHead().getColor().equals(color)){
+                count++;
+            }
+            temp = temp.next;
+        }
+        return count;
+
+
+    }
+
+
+
+    public ArrayList<Integer> idsOfCarsHaveThisManyPassengers(int amountOfPassengers){
         ArrayList<Integer> listOfIds = new ArrayList<>();
         HovLane temp = this;
         while (temp.next != null) {
