@@ -5,7 +5,8 @@ import java.util.Objects;
 public class Car  {
     private int ID;
     private String color;
-    private int num;
+    private int numOfPassengers;
+
 
 
 
@@ -13,16 +14,16 @@ public class Car  {
     public Car(int ID, String color, int num) {
         this.ID = ID;
         this.color = color;
-        this.num = num;
+        this.numOfPassengers = num;
 
     }
 
-    public int getNum() {
-        return num;
+    public int getNumOfPassengers() {
+        return numOfPassengers;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public void setNumOfPassengers(int num) {
+        this.numOfPassengers = num;
     }
 
     public HovLane carConvert(Car theCar){
@@ -65,6 +66,6 @@ public class Car  {
 
     @Override
     public String toString() {
-        return "Car{" + "ID=" + ID + ", color='" + color + '\'' + ", num=" + num + '}';
+        return "Car{" + "ID=" + ID + ", color='" + color + '\'' + ", num=" + numOfPassengers + '}';
     }
 }

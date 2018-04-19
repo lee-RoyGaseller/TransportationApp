@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class HovLane {
     private Car head;
     private HovLane next;
@@ -34,13 +36,6 @@ public class HovLane {
         return head;
     }
 
-    public HovLane carConvert(Car theCar){
-
-        HovLane car = new HovLane(theCar);
-
-        return car;
-    }
-
     public int size() {
         int count = 1;
         HovLane temp = this;
@@ -50,6 +45,20 @@ public class HovLane {
             temp = temp.next;
         }
         return count;
+
+    }
+
+    public ArrayList<Integer> idsOfCarsHaveThisManyPassengers(HovLane theLane, int amountOfPassengers){
+        ArrayList<Integer> listOfIds = new ArrayList<>();
+        HovLane temp = this;
+        while (temp.next != null) {
+            if(temp.getHead().getNumOfPassengers() == 1){
+                listOfIds.add(temp.getHead().getID());
+            }
+            temp = temp.next;
+        }
+        return listOfIds;
+
 
     }
 
