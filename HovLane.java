@@ -52,7 +52,7 @@ public class HovLane {
         int count = 0;
         HovLane temp = this;
         while (temp.next != null) {
-            if(temp.getHead().getColor().equals(color)){
+            if(temp.getHead().getColor().equals(color) || temp.getNext().getHead().getColor().equals(color)){
                 count++;
             }
             temp = temp.next;
@@ -68,9 +68,13 @@ public class HovLane {
         ArrayList<Integer> listOfIds = new ArrayList<>();
         HovLane temp = this;
         while (temp.next != null) {
-            if(temp.getHead().getNumOfPassengers() == 1){
+            if(temp.getHead().getNumOfPassengers() == amountOfPassengers){
                 listOfIds.add(temp.getHead().getID());
             }
+            else if(temp.getNext().getHead().getNumOfPassengers() == amountOfPassengers){
+                listOfIds.add(temp.getNext().getHead().getID());
+            }
+
             temp = temp.next;
         }
         return listOfIds;

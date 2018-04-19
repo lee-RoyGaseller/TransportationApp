@@ -52,9 +52,9 @@ public class Main {
         ArrayList<Integer> idsOfCarsWithOneOccupant = new ArrayList<>();
 
         idsOfCarsWithOneOccupant = lane.idsOfCarsHaveThisManyPassengers(1);
-        System.out.println("cars with one passenger: "+ idsOfCarsWithOneOccupant);
+        System.out.println("IDs of cars with one passenger: "+ idsOfCarsWithOneOccupant);
 
-        int carsOfThisColor = lane.howManyCarsAreOfThisColor("green");
+        int carsOfThisColor = lane.howManyCarsAreOfThisColor("red");
 
         System.out.println("how many cars green: "+ carsOfThisColor);
     }
